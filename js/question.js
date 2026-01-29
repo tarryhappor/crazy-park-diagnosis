@@ -25,8 +25,14 @@ function answer(choice) {
   if (index < questions.length) {
     show();
   } else {
+    const finalType =
+      (score.E >= score.I ? "E" : "I") +
+      (score.S >= score.N ? "S" : "N") +
+      (score.T >= score.F ? "T" : "F") +
+      (score.J >= score.P ? "J" : "P");
+
     localStorage.setItem("parkScore", JSON.stringify(score));
-    location.href = "result.html";
+    location.href = "result.html?type=" + finalType;
   }
 }
 
