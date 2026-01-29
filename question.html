@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>診断中｜狂気の公園診断</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -10,14 +11,10 @@
 <div class="card">
   <h2 id="count">Q1 / 16</h2>
 
-  <p id="question">
-    質問が表示されます
-  </p>
+  <p id="question">質問が表示されます</p>
 
-  <div style="margin-top: 24px;">
-    <button onclick="answer('yes')">はい</button>
-    <button onclick="answer('no')">いいえ</button>
-  </div>
+  <button onclick="answer('yes')">はい</button>
+  <button onclick="answer('no')">いいえ</button>
 </div>
 
 <script src="data/questions.js"></script>
