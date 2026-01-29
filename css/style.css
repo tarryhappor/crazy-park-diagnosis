@@ -1,38 +1,53 @@
 body {
-  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
   background: #f8fafc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: sans-serif;
 }
 
 .card {
-  width: 420px;
-  background: white;
-  border-radius: 18px;
-  padding: 32px;
-  text-align: center;
+  max-width: 480px;
+  width: 92%;
+  margin: 40px auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 16px;
+}
+
+p {
+  line-height: 1.8;
+  white-space: pre-line;
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 24px;
-  background: #6366f1;
-  color: white;
+  width: 100%;
+  padding: 14px;
+  margin-top: 12px;
   font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background: #6366f1;
+  color: #fff;
   cursor: pointer;
 }
+
+button:hover {
+  opacity: 0.9;
+}
+
 .bar {
   width: 100%;
   height: 14px;
   background: #e5e7eb;
   border-radius: 10px;
-  margin: 20px 0;
   overflow: hidden;
+  margin: 20px 0;
 }
 
 #bar-inner {
@@ -40,4 +55,3 @@ button {
   background: linear-gradient(90deg, #6366f1, #a855f7);
   width: 0%;
 }
-
