@@ -1,14 +1,10 @@
 let index = 0;
 
 let score = {
-  E: 0,
-  I: 0,
-  S: 0,
-  N: 0,
-  T: 0,
-  F: 0,
-  J: 0,
-  P: 0
+  E: 0, I: 0,
+  S: 0, N: 0,
+  T: 0, F: 0,
+  J: 0, P: 0
 };
 
 const questionEl = document.getElementById("question");
@@ -19,8 +15,9 @@ function show() {
   countEl.innerText = "Q" + (index + 1) + " / 16";
 }
 
-function answer() {
-  const type = questions[index].type;
+function answer(choice) {
+  const q = questions[index];
+  const type = q[choice];
   score[type]++;
 
   index++;
@@ -28,7 +25,6 @@ function answer() {
   if (index < questions.length) {
     show();
   } else {
-    // 結果を保存
     localStorage.setItem("parkScore", JSON.stringify(score));
     location.href = "result.html";
   }
