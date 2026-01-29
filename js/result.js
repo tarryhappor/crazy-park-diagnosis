@@ -199,3 +199,43 @@ const resultMap = {
 
   ENTJ: {
     park: "日向公園",
+    madness: 70,
+    text: `決断と支配の人。
+
+高台の公園から街を見下ろすと、
+全体構造が手に取るように見えます。
+
+ただし「管理できない感情」に直面したとき、
+公園はあなたを試します。`
+  }
+};
+
+const result = resultMap[type];
+
+document.getElementById("type").innerText =
+  `${type}｜${result.park}`;
+
+document.getElementById("description").innerText =
+  `狂気度：${result.madness}％\n\n${result.text}`;
+
+document.getElementById("bar-inner").style.width =
+  result.madness + "%";
+
+document.getElementById("notice").innerText =
+  new Date().getHours() < 5
+    ? "※……この時間にここへ来た理由を、あなたは覚えていますか。"
+    : "※診断は娯楽目的です。";
+
+function shareResult() {
+  const url = location.href;
+
+  if (navigator.share) {
+    navigator.share({
+      title: "狂気の公園診断",
+      text: "あなたの診断結果はこちら👇",
+      url: url
+    });
+  } else {
+    prompt("このURLをコピーしてシェアしてください", url);
+  }
+}
