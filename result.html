@@ -1,30 +1,9 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <title>診断結果｜狂気の公園診断</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+document.getElementById("type").innerText = "ESTJ｜腹切松公園";
+document.getElementById("description").innerText =
+  "狂気度：55％\n\nテスト表示です。";
+document.getElementById("bar-inner").style.width = "55%";
+document.getElementById("notice").innerText = "JSは正常に読み込まれています。";
 
-<div class="card">
-  <h1>診断結果</h1>
-
-  <h2 id="type"></h2>
-
-  <p id="description"></p>
-
-  <div class="bar">
-    <div id="bar-inner"></div>
-  </div>
-
-  <p id="notice"></p>
-
-  <button onclick="shareResult()">結果をシェア</button>
-  <button onclick="location.href='index.html'">もう一度診断する</button>
-</div>
-
-<script src="js/result.js"></script>
-</body>
-</html>
+function shareResult() {
+  alert("シェア機能は後で復活します");
+}
